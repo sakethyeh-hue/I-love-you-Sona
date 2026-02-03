@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEHEHEHEEHEHEHE I LOVE YOU TOOOO SWEEETYYYYYYYY!!!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Colour.css">
+</head>
+<body>
+    <h1>I LOVE YOU SOO MUCH MY LOVE HEHEEHEHEHEHE</h1>
+    <img src="c1.jpg">
+    <img src="c2.jpg">
+    <img src="c3.jpg">
+
+<section class="action-buttons">
+    <a href="letter.html">
+        <button class="btn back-btn">Back to letter</button>
+    </a>
+
+    <button class="btn break-btn" id="break-btn">I need a break</button>
+
+    <!-- Error message placeholder -->
+<div class="feedback-container">
+    <p id="error-msg" class="error-message"></p>
+    <img id="supImg" src="fun.png" alt="NOO!!" class="supImg">
+</div>
+</section>
+<br>
+<script>
+    const breakBtn = document.getElementById("break-btn");
+    const errorMsg = document.getElementById("error-msg");
+    const sImg = document.getElementById("supImg");
+
+    let clickCount = 0;
+
+    breakBtn.addEventListener("click", () => {
+        clickCount++;
+
+     if (clickCount === 1) {
+
+        errorMsg.textContent = "🚨 HEHE YOU REALLY THOUGHT YOU COULD GO SONA!!";
+        errorMsg.style.display = "block";            
+
+        } else {
+            sImg.style.display = "block";
+        }
+    });
+</script>
+
+</body>
+
+</html>

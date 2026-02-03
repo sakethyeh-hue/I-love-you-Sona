@@ -1,0 +1,168 @@
+/* ===================== Reset ===================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+}
+
+/* ===================== Body ===================== */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffe6eb, #fff0f5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #5a2a2a;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ===================== Letter Container ===================== */
+#letter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* ===================== Letter Window ===================== */
+.letter-window {
+    position: relative;
+    width: 420px;
+    max-width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff8f9;
+    padding: 30px 20px;
+}
+
+.letter-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* ===================== Letter Text ===================== */
+.letter-text {
+    position: relative; /* relative is cleaner than absolute */
+    margin-top: 20px;
+    text-align: center;
+    color: #4a1f1f;
+    line-height: 1.6;
+}
+
+.letter-text h1 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+}
+
+.letter-text p {
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* ===================== Buttons ===================== */
+.buttons, .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    width: 120px;          /* Uniform width for all buttons */
+    padding: 12px 0;       /* Vertical padding, horizontal handled by width */
+    font-size: 1rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(239, 217, 150, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ===================== Specific Button Colors ===================== */
+.yes-btn {
+    background-color: #ff5a5a;
+    color: #fff;
+}
+
+.no-btn {
+    background-color: #aaa;
+    color: #fff;
+}
+
+.back-btn {
+    display: block;       /* Make block to appear below buttons */
+    width: 180px;
+    margin: 20px auto 0;
+    background-color: #ffb6c1;
+    color: #5a2a2a;
+}
+
+/* ===================== Feedback Container ===================== */
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.error-message {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: none; /* hidden initially */
+    text-align: center;
+}
+
+.supImg {
+    display: none; /* hidden initially */
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.supImg:hover {
+    transform: scale(1.05);
+}
+
+/* ===================== Responsive ===================== */
+@media (max-width: 500px) {
+    .letter-window {
+        padding: 20px 15px;
+    }
+
+    .letter-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .letter-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 100px;
+        font-size: 0.95rem;
+    }
+
+    .supImg {
+        width: 200px;
+    }
+}
